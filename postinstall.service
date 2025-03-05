@@ -1,0 +1,11 @@
+[Unit]
+Description Run post-install setup script
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/postinstall/setup.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
