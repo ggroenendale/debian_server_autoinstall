@@ -17,6 +17,7 @@ Here is the step by step:
 ### 1) Install Ventoy onto a USB stick
 
 Download Ventoy
+
 > https://www.ventoy.net/en/download.html
 
 ```bash
@@ -31,14 +32,15 @@ cp ~/Downloads/debian.iso /mnt/ventoy
 
 ### 3) Setup Ansible and other scripts on USB stick
 
-Ventoy creates a standard FAT32/ExFAT parition, we can add a foilkder for Ansible and our post-install scripts.
+Ventoy creates a standard FAT32/ExFAT parition, we can add a folder for Ansible and our post-install scripts.
 
 Create ansible folder on USB stick
+
 ```bash
 mkdir /mnt/ventoy/debian_install
 ```
 
-Copy the `preseed.cfg`, `postinstall.service`, `setup.sh`, and `playbook.yml` files to the debian_postinstall folder.
+Copy the `preseed.cfg`, `postinstall.service`, `setup.sh`, and `playbook.yml` files to the debian_install folder.
 
 ```bash
 cp preseed.cfg /mnt/ventoy/debian_install
@@ -46,4 +48,3 @@ cp postinstall.service /mnt/ventoy/debian_install
 cp setup.sh /mnt/ventoy/debian_install
 cp playbook.yml /mnt/ventoy/debian_install
 ```
-
